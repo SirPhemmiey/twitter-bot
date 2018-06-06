@@ -20,6 +20,18 @@ T.get('search/tweets', params, function(err, data, response) {
                 id: data.statuses[i]
             }
             //try to mark the results favourite
+            T.post('favorite/create', id, function(err, response) {
+                //if the fav fails log the err
+                if (err) {
+                    console.log(err[0].message);
+                }
+                else {
+let username = response.user.screen_name;
+let tweet_id = response.id_str;
+console.log('Favorited', `https://twitter.com/${username}/status/${tweet_id}`)
+
+                }
+            })
         }
     
     }
