@@ -1,0 +1,11 @@
+{
+  "name": "TwitterBot",
+  "version": "1.0.0",
+  "description": "A bot that searches for user defined sets or keywords",
+  "main": "app.js",
+  "author": "SirPhemmiey",
+  "license": "MIT",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
+}
