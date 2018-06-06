@@ -20,7 +20,7 @@ T.get('search/tweets', params, function(err, data, response) {
                 id: data.statuses[i]
             }
             //try to mark the results favourite
-            T.post('favorite/create', id, function(err, response) {
+            T.post('favorites/create', id, function(err, response) {
                 //if the fav fails log the err
                 if (err) {
                     console.log(err[0].message);
